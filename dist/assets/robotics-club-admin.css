@@ -1,0 +1,339 @@
+.loginForm {
+  width: 400px;
+  margin: 100px auto; }
+  .loginForm .loginFormSegment {
+    box-sizing: border-box; }
+    .loginForm .loginFormSegment label {
+      margin: 10px 0;
+      font-family: "Roboto Condensed";
+      display: block; }
+    .loginForm .loginFormSegment input {
+      display: block;
+      width: 100%;
+      padding: 15px;
+      box-sizing: border-box;
+      font-size: 16px;
+      border: #ddd thin solid;
+      background: none; }
+    .loginForm .loginFormSegment .loginFormSubmit {
+      margin: 20px 0;
+      display: block;
+      width: 100%;
+      padding: 15px;
+      font-size: 16px;
+      border: #ddd thin solid;
+      background: none; }
+
+body {
+  margin: 0;
+  padding: 0;
+  background: white;
+  font-family: "Roboto", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto Condensed", sans-serif; }
+
+code {
+  font-family: "Roboto Mono", monospace; }
+
+#app-nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 200px;
+  background: #2C303A; }
+  #app-nav-logo {
+    display: block;
+    height: 50px;
+    text-align: center;
+    padding: 13px;
+    box-sizing: border-box;
+    font-size: 24px;
+    color: white;
+    background: #249032;
+    font-family: "Roboto", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px; }
+  #app-nav-links {
+    color: #f4f4f4; }
+    #app-nav-links a {
+      width: 100%;
+      display: block;
+      padding: 10px;
+      box-sizing: border-box;
+      text-align: center;
+      text-decoration: none;
+      color: #f4f4f4; }
+      #app-nav-links a.active {
+        color: #82C01F; }
+
+#main-view {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 200px;
+  bottom: 0; }
+
+#guides-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 400px;
+  border-right: #aaa thin solid; }
+  #guides-wrapper .actions-bar {
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    border-bottom: #ddd thin solid; }
+    #guides-wrapper .actions-bar #createNewGuide {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      width: 100px;
+      padding: 10px;
+      padding-right: 0;
+      box-sizing: border-box; }
+      #guides-wrapper .actions-bar #createNewGuide button {
+        width: 100%;
+        height: 100%;
+        background: #61B62B;
+        border: none;
+        border-radius: 3px;
+        color: white;
+        margin: 0;
+        text-transform: uppercase;
+        font-family: "Roboto Condensed", sans-serif;
+        letter-spacing: 1px; }
+    #guides-wrapper .actions-bar #searchQuery {
+      position: absolute;
+      right: 0;
+      left: 100px;
+      top: 0;
+      bottom: 0;
+      padding: 10px;
+      box-sizing: border-box; }
+      #guides-wrapper .actions-bar #searchQuery input {
+        width: 100%;
+        margin: 0;
+        padding: 10px;
+        box-sizing: border-box;
+        height: 100%;
+        border: #ddd thin solid;
+        border-radius: 3px;
+        font-family: "Roboto", sans-serif; }
+
+#guides {
+  position: absolute;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  overflow: scroll; }
+  #guides .guide {
+    border-bottom: #ddd thin solid;
+    padding: 10px;
+    display: block;
+    color: #434343;
+    text-decoration: none; }
+    #guides .guide.active {
+      background: #f4f4f4; }
+    #guides .guide-updated {
+      font-size: 10px;
+      letter-spacing: 1px; }
+    #guides .guide-title {
+      font-size: 16px;
+      font-family: "Roboto Condensed", sans-serif; }
+
+#guide-preview {
+  position: absolute;
+  top: 0;
+  left: 400px;
+  right: 0;
+  bottom: 0; }
+  #guide-preview #guide-preview-placeholder {
+    width: 80%;
+    margin: 100px auto;
+    text-align: center;
+    font-size: 42px;
+    color: #ddd;
+    padding: 30px 40px;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: "Roboto Condensed", sans-serif;
+    border: #ddd thin solid;
+    border-radius: 3px; }
+  #guide-preview .actions-bar {
+    position: absolute;
+    top: 0;
+    height: 50px;
+    left: 1px;
+    right: 0;
+    background-color: white;
+    border-bottom: #ddd thin solid; }
+  #guide-preview #guide-preview-wrapper {
+    z-index: 800;
+    position: absolute;
+    top: 51px;
+    left: 1px;
+    right: 0;
+    bottom: 0;
+    background: white; }
+  #guide-preview #guideDocumentViewerWrapper {
+    width: 100%;
+    max-width: 700px;
+    padding: 15px;
+    box-sizing: border-box; }
+
+.actions-bar-button {
+  padding: 10px 15px;
+  margin-top: 8px;
+  margin-left: 10px;
+  font-family: "Roboto Condensed", sans-serif;
+  border-radius: 3px;
+  background: #61B62B;
+  border: none;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none; }
+
+#guideDocumentViewerWrapper-new-guide {
+  position: absolute;
+  top: 0;
+  right: 400px;
+  left: 0;
+  bottom: 0; }
+
+#createGuideWrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 400px;
+  border-left: #ccc thin solid; }
+
+.guideDocumentViewer {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  padding: 15px;
+  box-sizing: border-box;
+  left: 0;
+  right: 0;
+  overflow: scroll;
+  color: #434343; }
+  .guideDocumentViewer .guideDocumentViewerContent {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto; }
+  .guideDocumentViewer img {
+    display: block;
+    width: 100%;
+    border-radius: 3px; }
+  .guideDocumentViewer p {
+    line-height: 1.4; }
+  .guideDocumentViewer a {
+    color: #249032; }
+  .guideDocumentViewer pre {
+    background: #333;
+    color: white;
+    padding: 15px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    overflow: auto; }
+    .guideDocumentViewer pre code {
+      font-size: 12px; }
+
+.guideDocumentEditor {
+  width: 100%;
+  height: 100%; }
+  .guideDocumentEditor .guideDocumentEditorSegment {
+    width: 100%;
+    padding: 15px;
+    box-sizing: border-box;
+    border-bottom: #ccc thin dashed; }
+  .guideDocumentEditor .guideDocumentEditorCreate {
+    position: absolute;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
+    border-top: #ccc thin solid; }
+    .guideDocumentEditor .guideDocumentEditorCreate button {
+      width: 100%;
+      height: 100%;
+      border: none;
+      background: none;
+      border-radius: 0;
+      font-family: "Roboto Condensed", sans-serif;
+      letter-spacing: 1px;
+      font-size: 16px;
+      color: #777; }
+  .guideDocumentEditor .guideDocumentEditorBody {
+    position: absolute;
+    top: 51px;
+    bottom: 50px;
+    width: 100%; }
+    .guideDocumentEditor .guideDocumentEditorBody textarea {
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      box-sizing: border-box;
+      margin: 0;
+      display: block;
+      font-size: 12px;
+      font-family: "Roboto Mono", monospace;
+      border: none;
+      resize: none; }
+  .guideDocumentEditor .guideDocumentEditorTitle {
+    position: absolute;
+    top: 0;
+    height: 50px;
+    width: 100%;
+    border-bottom: #ccc thin solid; }
+    .guideDocumentEditor .guideDocumentEditorTitle input {
+      width: 100%;
+      height: 100%;
+      padding: 15px;
+      box-sizing: border-box;
+      margin: 0;
+      display: block;
+      border: none;
+      font-size: 18px;
+      font-family: "Roboto Condensed", sans-serif; }
+
+.confirmationModal {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.5); }
+  .confirmationModal .confirmationModalCard {
+    padding: 15px;
+    box-sizing: border-box;
+    width: 400px;
+    min-height: 300px;
+    background: white;
+    border-radius: 3px;
+    margin: 100px auto 0; }
+  .confirmationModal .confirmationModalButton {
+    font-family: "Roboto Condensed", sans-serif;
+    border-radius: 3px;
+    background: #61B62B;
+    border: none;
+    color: white;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 10px 15px;
+    text-decoration: none; }
+    .confirmationModal .confirmationModalButton.delete {
+      background: #DF4E35; }
+
+/*# sourceMappingURL=robotics-club-admin.css.map */
